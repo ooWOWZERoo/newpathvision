@@ -725,6 +725,50 @@ a.flagship-tile:focus-visible {
   margin: 0;
 }
 
+/* ---------- Dry eye stepper ---------- */
+
+.dry-eye-stepper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.stepper-step {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 4px 16px;
+}
+
+.stepper-step summary {
+  padding: 16px 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+.stepper-step summary::-webkit-details-marker {
+  display: none;
+}
+
+.stepper-step .step-index {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--brand-primary);
+  margin-bottom: 6px;
+}
+
+.stepper-step p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0 0 16px;
+}
+
 /* ---------- Library teaser ---------- */
 
 .library-teaser {
@@ -1157,6 +1201,10 @@ a.team-bio-card:focus-visible {
   .process-timeline {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .dry-eye-stepper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 700px) {
@@ -1252,7 +1300,8 @@ a.team-bio-card:focus-visible {
 
   .care-path-grid,
   .technology-grid,
-  .process-timeline {
+  .process-timeline,
+  .dry-eye-stepper {
     grid-template-columns: 1fr;
   }
 
