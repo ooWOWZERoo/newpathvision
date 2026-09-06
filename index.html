@@ -4,18 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>New Path Vision | Pottstown, PA Eye Care &amp; The Dry Eye Center</title>
-<meta name="description" content="Full-scope vision care in Pottstown, PA, plus The Dry Eye Center — our in-house room for diagnosing and treating chronic dry eye with OptiLight IPL. One ophthalmologist, four optometrists, zero rushing." />
-<!-- TODO: swap for the real custom domain once one is set up (currently the Vercel deployment URL) -->
+<meta name="description" content="Comprehensive eye care, medical eye management and advanced dry-eye treatment in Pottstown, PA — one ophthalmologist, four optometrists, and an in-house Dry Eye Center." />
 <link rel="canonical" href="https://newpathvision-hr9l.vercel.app/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="New Path Vision" />
 <meta property="og:title" content="New Path Vision | Pottstown, PA Eye Care &amp; The Dry Eye Center" />
-<meta property="og:description" content="Full-scope vision care in Pottstown, PA, plus The Dry Eye Center — our in-house room for diagnosing and treating chronic dry eye with OptiLight IPL." />
+<meta property="og:description" content="Comprehensive eye care, medical eye management and advanced dry-eye treatment in Pottstown, PA." />
 <meta property="og:url" content="https://newpathvision-hr9l.vercel.app/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="New Path Vision | Pottstown, PA Eye Care &amp; The Dry Eye Center" />
-<meta name="twitter:description" content="Full-scope vision care in Pottstown, PA, plus The Dry Eye Center — our in-house room for diagnosing and treating chronic dry eye with OptiLight IPL." />
-<!-- TODO: replace with the practice's real logo/favicon once one exists (see README) -->
+<meta name="twitter:description" content="Comprehensive eye care, medical eye management and advanced dry-eye treatment in Pottstown, PA." />
+<!-- TODO(asset): replace with the practice's real logo/favicon once one exists (see README) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23233420'/%3E%3Ctext x='32' y='45' font-family='Arial, sans-serif' font-weight='700' font-size='36' fill='%23fbf7ee' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,72 +25,258 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="utility-bar">
+  <div class="utility-bar-inner">
+    <a href="tel:+16103262754" class="utility-emergency">Eye emergency? Call 610-326-2754</a>
+    <a href="https://yourstore.wewillship.com/?account_id=5755" class="external-action-link" target="_blank" rel="noopener">Reorder Contacts<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <!-- TODO(link): verify this is the correct patient-facing portal destination before relying on it -->
+    <a href="https://newpathvision.eyefinityehr.com/" class="external-action-link" target="_blank" rel="noopener">Patient Portal<span class="visually-hidden"> (opens in a new tab)</span></a>
+  </div>
+</div>
+
 <header>
   <nav class="site-nav" id="siteNav">
     <a href="/" class="wordmark">New Path Vision</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
     <div class="nav-links">
-      <a href="#services">Services</a>
+      <div class="nav-utility-mobile">
+        <a href="tel:+16103262754">Eye emergency? Call 610-326-2754</a>
+        <a href="https://yourstore.wewillship.com/?account_id=5755" target="_blank" rel="noopener">Reorder Contacts</a>
+        <a href="https://newpathvision.eyefinityehr.com/" target="_blank" rel="noopener">Patient Portal</a>
+      </div>
+      <details class="nav-dropdown">
+        <summary>Eye Care</summary>
+        <div class="nav-dropdown-panel">
+          <a href="eye-care.html">Eye Care Overview</a>
+          <a href="eye-care/comprehensive-eye-exams.html">Comprehensive Eye Exams</a>
+          <a href="eye-care/medical-eye-care.html">Medical Eye Care</a>
+          <a href="eye-care/emergency-eye-care.html">Emergency Eye Care</a>
+          <a href="eye-care/cataract-evaluations.html">Cataract Evaluations</a>
+          <a href="eye-care/pre-post-operative-care.html">Pre &amp; Post-Operative Care</a>
+        </div>
+      </details>
+      <details class="nav-dropdown">
+        <summary>Dry Eye Center</summary>
+        <div class="nav-dropdown-panel">
+          <a href="dry-eye.html">Overview</a>
+          <a href="dry-eye/symptoms.html">Symptoms</a>
+          <a href="dry-eye/causes.html">Causes</a>
+          <a href="dry-eye/diagnosis.html">Diagnosis</a>
+          <a href="dry-eye/treatments.html">Treatments</a>
+        </div>
+      </details>
       <a href="about.html">About</a>
-      <a href="#dry-eye-center">Dry Eye Center</a>
+      <a href="team.html">Our Team</a>
+      <details class="nav-dropdown">
+        <summary>Patient Resources</summary>
+        <div class="nav-dropdown-panel">
+          <a href="patient-resources.html">Patient Resources Overview</a>
+          <a href="patient-resources/insurance-payment.html">Insurance &amp; Payment</a>
+          <a href="patient-resources/what-to-expect.html">What to Expect</a>
+          <a href="patient-resources.html#faqs">FAQs</a>
+        </div>
+      </details>
       <a href="contact.html">Contact</a>
-      <!-- TODO: point every "Book now" link at the practice's 4PatientCare booking widget -->
-      <a href="#book" class="btn btn-nav">Book now</a>
+      <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-nav" target="_blank" rel="noopener">Book now</a>
     </div>
   </nav>
 </header>
 
-<main>
+<main id="main">
 
-  <!-- Hero -->
+  <!-- Section 1: Hero -->
   <section class="hero">
-    <p class="eyebrow">Pottstown, PA — Home of The Dry Eye Center</p>
-    <h1>Eye care that actually pays attention.</h1>
-    <p>Full-scope vision care, plus The Dry Eye Center — our dedicated in-house room for diagnosing and treating chronic dry eye with OptiLight IPL. One ophthalmologist, four optometrists, zero rushing.</p>
+    <p class="eyebrow">Pottstown, PA &mdash; Home of The Dry Eye Center</p>
+    <h1>Better vision starts with understanding your eyes.</h1>
+    <!-- TODO(copy): proposed direction, not final client-approved copy -->
+    <p>Comprehensive eye care, medical eye management and advanced dry-eye treatment in Pottstown, with a team that takes the time to explain what we see and what comes next.</p>
     <div class="cta-row">
-      <a href="#book" class="btn btn-primary">Book now</a>
-      <a href="#dry-eye-center" class="btn btn-outline">See how we treat dry eye</a>
+      <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-primary" target="_blank" rel="noopener">Book an Appointment</a>
+      <a href="#pathways" class="btn btn-outline">Find the Right Care</a>
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="services" id="services">
-    <h2 class="section-eyebrow">Here for whatever your eyes need</h2>
+  <!-- Section 2: What brings you in? -->
+  <section class="services" id="pathways">
+    <h2 class="section-eyebrow">What can we help you with today?</h2>
+    <div class="care-path-grid">
+      <a class="care-path-card" href="eye-care/comprehensive-eye-exams.html">
+        <h3>I need an eye exam</h3>
+        <p>Full-scope vision and eye-health checks for every age.</p>
+      </a>
+      <a class="care-path-card" href="dry-eye.html">
+        <h3>My eyes are dry or irritated</h3>
+        <p>Diagnosis-first dry eye care at our in-house Dry Eye Center.</p>
+      </a>
+      <a class="care-path-card" href="eye-care/emergency-eye-care.html">
+        <h3>I have sudden symptoms or an injury</h3>
+        <p>Call us first — we'll tell you what to do next.</p>
+      </a>
+      <a class="care-path-card" href="eye-care/medical-eye-care.html">
+        <h3>I'm managing an eye condition</h3>
+        <p>Ongoing monitoring for glaucoma, diabetic eye disease and more.</p>
+      </a>
+      <a class="care-path-card" href="eye-care/cataract-evaluations.html">
+        <h3>I need cataract or surgical follow-up care</h3>
+        <p>Evaluation and co-management before and after surgery.</p>
+      </a>
+      <a class="care-path-card" href="eyewear-contacts.html">
+        <h3>I need glasses or contacts</h3>
+        <p>Eyewear guidance and easy contact lens reordering.</p>
+      </a>
+    </div>
+  </section>
 
+  <!-- Section 3: Practice promise -->
+  <section class="about-story">
+    <!-- TODO(copy): proposed direction, not final client-approved copy -->
+    <div>
+      <h2>Your eyes deserve more than a quick prescription check.</h2>
+      <p>We look at how well you see, how healthy your eyes are, and what may be changing over time. When something needs attention, we explain the findings, your options, and the next step in plain language — no rushed five-minute exam, no jargon.</p>
+      <p><a href="eye-care.html" class="btn btn-outline">Explore Eye Care</a></p>
+    </div>
+    <dl class="about-facts">
+      <dt>1</dt>
+      <dd>Ophthalmologist on staff, for cataract and surgical co-management</dd>
+      <dt>4</dt>
+      <dd>Optometrists, so visits don't get rushed</dd>
+      <dt>1</dt>
+      <dd>In-house Dry Eye Center, built around OptiLight IPL</dd>
+    </dl>
+  </section>
+
+  <!-- Section 4: Featured care -->
+  <section class="services">
+    <h2 class="section-eyebrow">Here for whatever your eyes need</h2>
     <div class="flagship-grid">
-      <div class="flagship-tile tile-sage" id="dry-eye-center">
+      <a class="flagship-tile tile-sage" href="eye-care/comprehensive-eye-exams.html">
+        <div class="chip" aria-hidden="true"></div>
+        <h3>Comprehensive Eye Exams</h3>
+        <p>For anyone due for an exam — a full-scope vision and eye-health check, not just a prescription update.</p>
+        <span class="cta-arrow">Book an exam &rarr;</span>
+      </a>
+      <a class="flagship-tile tile-ink" href="eye-care/medical-eye-care.html">
+        <div class="chip" aria-hidden="true"></div>
+        <h3>Medical Eye Care</h3>
+        <p>For known conditions or new symptoms — ongoing monitoring and management, not just a referral out.</p>
+        <span class="cta-arrow">Learn more &rarr;</span>
+      </a>
+      <a class="flagship-tile tile-ink" href="dry-eye.html">
         <div class="chip" aria-hidden="true"></div>
         <h3>The Dry Eye Center</h3>
-        <p>A dedicated room, right here in our office, for diagnosing and treating chronic dry eye with OptiLight IPL — not just another bottle of drops.</p>
-      </div>
-      <div class="flagship-tile tile-ink">
+        <p>For burning, gritty or fluctuating vision — diagnosis before treatment, powered by OptiLight IPL.</p>
+        <span class="cta-arrow">Explore the Dry Eye Center &rarr;</span>
+      </a>
+      <a class="flagship-tile tile-sage" href="eye-care/emergency-eye-care.html">
         <div class="chip" aria-hidden="true"></div>
-        <h3>Cataract Evaluation</h3>
-        <p>Straight answers on what's next, co-managed with our on-staff ophthalmologist.</p>
+        <h3>Emergency Eye Care</h3>
+        <p>For sudden vision change or eye pain — call us first and we'll tell you what to do next.</p>
+        <span class="cta-arrow">Call 610-326-2754 &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section 5: Dry Eye Center signature story -->
+  <section class="about-story" id="dry-eye-center">
+    <!-- TODO(copy): proposed direction, not final client-approved copy -->
+    <div>
+      <p class="section-eyebrow">The Dry Eye Center at New Path Vision</p>
+      <h2>Dry eye has different causes. Your treatment should reflect yours.</h2>
+      <p>Burning, grittiness, watering, fluctuating vision and contact-lens discomfort can come from different problems. Our dry-eye evaluation looks at the tear film, eyelid oil glands and ocular surface — so treatment is based on what we actually find, not just another bottle of drops.</p>
+      <div class="cta-row">
+        <a href="dry-eye.html" class="btn btn-outline">Explore the Dry Eye Center</a>
+        <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-primary" target="_blank" rel="noopener">Schedule a Dry Eye Evaluation</a>
       </div>
     </div>
+    <dl class="about-facts">
+      <dt>1</dt>
+      <dd>Tear film analysis — how stable is your tear layer?</dd>
+      <dt>2</dt>
+      <dd>Oil gland evaluation — are the glands that lubricate your eyes working?</dd>
+      <dt>3</dt>
+      <dd>Ocular surface &amp; inflammation check — what's actually irritated, and why?</dd>
+    </dl>
+  </section>
 
-    <div class="secondary-grid">
-      <div class="secondary-card">
-        <h3>Family Eye Care</h3>
-        <p>Exams, glasses, contacts — for everyone in the house.</p>
+  <!-- Section 6: Technology -->
+  <section class="services">
+    <h2 class="section-eyebrow">Better information. Clearer decisions.</h2>
+    <div class="technology-grid">
+      <div class="technology-card">
+        <h3>OptiLight IPL &amp; tear film analysis</h3>
+        <p><strong>What it helps us see</strong>What's actually driving your dry eye symptoms — tear stability, oil gland function, and inflammation.</p>
+        <p><strong>Why it matters to you</strong>Treatment is based on your specific cause, not a one-size-fits-all bottle of drops.</p>
       </div>
-      <div class="secondary-card">
-        <h3>Ocular Disease</h3>
-        <p>Ongoing monitoring, treated early.</p>
+      <!-- TODO(fact): confirm this technology is actually in use before publishing -->
+      <div class="technology-card">
+        <h3>Digital retinal imaging</h3>
+        <p><strong>What it helps us see</strong>A wide, detailed view of the back of your eye.</p>
+        <p><strong>Why it matters to you</strong>May reduce the need for dilation at every visit — your doctor will still recommend it when clinically necessary.</p>
       </div>
-      <div class="secondary-card">
-        <h3>Pre/Post-Op</h3>
-        <p>Covered before and after surgery.</p>
-      </div>
-      <div class="secondary-card">
-        <h3>Emergencies</h3>
-        <p>Sudden vision change? Come in today.</p>
+      <!-- TODO(fact): confirm this technology is actually in use before publishing -->
+      <div class="technology-card">
+        <h3>Comprehensive visual field &amp; eye-health screening</h3>
+        <p><strong>What it helps us see</strong>Early changes in eye health that a prescription check alone would miss.</p>
+        <p><strong>Why it matters to you</strong>Conditions like glaucoma get caught — and monitored — earlier.</p>
       </div>
     </div>
   </section>
 
-  <!-- Why this practice -->
+  <!-- Section 7: Team -->
+  <section class="team">
+    <h2 class="section-eyebrow">Meet the people treating you</h2>
+    <!-- TODO(fact): roster/credentials pending confirmation; TODO(asset): real headshots pending -->
+    <div class="team-bio-grid">
+      <a class="team-bio-card" href="team/provider-1.html">
+        <div class="team-photo">Photo</div>
+        <h3>Dr. [Name]</h3>
+        <div class="team-role">Ophthalmologist, MD</div>
+        <p>Oversees cataract evaluation and surgical co-management.</p>
+      </a>
+      <a class="team-bio-card" href="team/provider-2.html">
+        <div class="team-photo">Photo</div>
+        <h3>Dr. [Name]</h3>
+        <div class="team-role">Optometrist, OD</div>
+        <p>Full-scope family eye care and dry eye treatment.</p>
+      </a>
+      <a class="team-bio-card" href="team/provider-3.html">
+        <div class="team-photo">Photo</div>
+        <h3>Dr. [Name]</h3>
+        <div class="team-role">Optometrist, OD</div>
+        <p>Full-scope family eye care and dry eye treatment.</p>
+      </a>
+      <a class="team-bio-card" href="team/provider-4.html">
+        <div class="team-photo">Photo</div>
+        <h3>Dr. [Name]</h3>
+        <div class="team-role">Optometrist, OD</div>
+        <p>Full-scope family eye care and dry eye treatment.</p>
+      </a>
+    </div>
+    <p class="section-cta"><a href="team.html" class="btn btn-outline">Meet the full team</a></p>
+  </section>
+
+  <!-- Section 8: Eyewear and contacts -->
+  <section class="services">
+    <h2 class="section-eyebrow">See well. Wear what works for your life.</h2>
+    <div class="flagship-grid">
+      <a class="flagship-tile tile-sage" href="eyewear-contacts.html">
+        <div class="chip" aria-hidden="true"></div>
+        <h3>Eyewear &amp; Optical</h3>
+        <p>Glasses and frame guidance for everyone in the house.</p>
+        <span class="cta-arrow">Explore Eyewear &rarr;</span>
+      </a>
+      <a class="flagship-tile tile-ink" href="https://yourstore.wewillship.com/?account_id=5755" target="_blank" rel="noopener">
+        <div class="chip" aria-hidden="true"></div>
+        <h3>Contact Lenses</h3>
+        <p>Reorder your contacts online through our trusted ordering partner.</p>
+        <span class="cta-arrow">Reorder Contacts &#8599;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section 9: Trust proof (practical trust — no unverified claims) -->
   <section class="why-practice">
     <div>
       <div class="dot" aria-hidden="true"></div>
@@ -107,45 +292,99 @@
     </div>
   </section>
 
-  <!-- Team teaser -->
-  <section class="team">
-    <h2 class="section-eyebrow">Meet the people treating you</h2>
-    <div class="team-grid">
-      <!-- TODO: replace each placeholder with a real staff headshot (roughly square crop) -->
-      <div>
-        <div class="team-photo">Photo</div>
-        <div class="team-role">Ophthalmologist, MD</div>
+  <!-- Section 10: Plan your visit -->
+  <section class="contact-grid">
+    <div class="contact-details">
+      <div class="contact-card">
+        <h3>Address</h3>
+        <p>1100 Heritage Drive<br />Pottstown, PA 19464</p>
+        <a href="https://maps.google.com/?q=1100+Heritage+Drive+Pottstown+PA+19464" class="btn btn-outline" target="_blank" rel="noopener">Get directions</a>
       </div>
-      <div>
-        <div class="team-photo">Photo</div>
-        <div class="team-role">Optometrist, OD</div>
+      <div class="contact-card">
+        <h3>Phone &amp; email</h3>
+        <p><a href="tel:+16103262754">610-326-2754</a><br /><a href="mailto:pottstown@newpathmedicalgroup.com">pottstown@newpathmedicalgroup.com</a></p>
       </div>
-      <div>
-        <div class="team-photo">Photo</div>
-        <div class="team-role">Optometrist, OD</div>
-      </div>
-      <div>
-        <div class="team-photo">Photo</div>
-        <div class="team-role">Optometrist, OD</div>
-      </div>
+    </div>
+    <div class="contact-card">
+      <h3>Hours</h3>
+      <!-- TODO(fact): the practice's existing web properties show conflicting hours — confirm before publishing -->
+      <table class="hours-table">
+        <tr><th>Monday&ndash;Thursday</th><td>8:00am&ndash;5:00pm</td></tr>
+        <tr><th>Friday</th><td>8:00am&ndash;3:00pm</td></tr>
+        <tr><th>Saturday&ndash;Sunday</th><td>Closed</td></tr>
+      </table>
+      <p class="contact-card-links">
+        <a href="patient-resources/insurance-payment.html">Insurance &amp; Payment</a> &middot;
+        <a href="patient-resources/what-to-expect.html">What to Expect</a>
+      </p>
     </div>
   </section>
 
-  <!-- Insurance strip -->
+  <!-- Insurance strip (pre-existing, approved content — TODO(fact) flagged per blueprint caution) -->
+  <!-- TODO(fact): confirm these affiliations/insurance details are current and accurate before publishing -->
   <section class="insurance">
     <span class="label">Insurance accepted</span>
     <span>AOA &middot; PA Optometric Association &middot; Opticians Association of PA</span>
   </section>
 
-  <!-- Final CTA -->
-  <!-- TODO: once the real 4PatientCare booking widget is wired in, every #book link across the
-       site should point straight at it instead of scrolling to this section -->
-  <section class="site-footer" id="book">
-    <h2>Let's take a look.</h2>
-    <a href="#book" class="btn btn-footer">Book now</a>
+  <!-- Section 11: Eye Health Library teaser -->
+  <section class="services">
+    <h2 class="section-eyebrow">Eye Health Library</h2>
+    <div class="library-teaser">
+      <p>Clinician-reviewed articles on dry eye, cataracts, eye emergencies and more are coming soon.</p>
+      <a href="eye-health-library.html" class="btn btn-outline">View Eye Health Library</a>
+    </div>
+  </section>
+
+  <!-- Section 12: Final conversion band -->
+  <section class="site-footer">
+    <h2>Ready to take the next step with your eyes?</h2>
+    <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-footer" target="_blank" rel="noopener">Book an Appointment</a>
+    <p class="footer-phone-note">Or call <a href="tel:+16103262754">610-326-2754</a></p>
   </section>
 
 </main>
+
+<footer class="footer-nav">
+  <div class="footer-nav-col">
+    <h3>Eye Care</h3>
+    <a href="eye-care/comprehensive-eye-exams.html">Comprehensive Eye Exams</a>
+    <a href="eye-care/medical-eye-care.html">Medical Eye Care</a>
+    <a href="eye-care/emergency-eye-care.html">Emergency Eye Care</a>
+    <a href="eye-care/cataract-evaluations.html">Cataract Evaluations</a>
+    <a href="eye-care/pre-post-operative-care.html">Pre &amp; Post-Operative Care</a>
+  </div>
+  <div class="footer-nav-col">
+    <h3>Dry Eye Center</h3>
+    <a href="dry-eye.html">Overview</a>
+    <a href="dry-eye/symptoms.html">Symptoms</a>
+    <a href="dry-eye/causes.html">Causes</a>
+    <a href="dry-eye/diagnosis.html">Diagnosis</a>
+    <a href="dry-eye/treatments.html">Treatments</a>
+  </div>
+  <div class="footer-nav-col">
+    <h3>Patient Actions</h3>
+    <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="external-action-link" target="_blank" rel="noopener">Book Appointment<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <a href="https://yourstore.wewillship.com/?account_id=5755" class="external-action-link" target="_blank" rel="noopener">Reorder Contacts<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <!-- TODO(link): verify this is the correct patient-facing portal destination before relying on it -->
+    <a href="https://newpathvision.eyefinityehr.com/" class="external-action-link" target="_blank" rel="noopener">Patient Portal<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <a href="patient-resources/insurance-payment.html">Insurance &amp; Payment</a>
+    <a href="patient-resources/what-to-expect.html">What to Expect</a>
+  </div>
+  <div class="footer-nav-col">
+    <h3>Visit Us</h3>
+    <address>1100 Heritage Drive<br />Pottstown, PA 19464</address>
+    <a href="tel:+16103262754">610-326-2754</a>
+    <a href="mailto:pottstown@newpathmedicalgroup.com">pottstown@newpathmedicalgroup.com</a>
+    <!-- TODO(fact): hours are inconsistent across the practice's existing web properties — confirm before publishing -->
+    <p>Mon&ndash;Thu 8am&ndash;5pm &middot; Fri 8am&ndash;3pm</p>
+    <a href="contact.html">Contact Us</a>
+  </div>
+  <div class="footer-legal">
+    <!-- TODO(later-phase): Privacy Policy / Accessibility Statement links -->
+    <p>&copy; <span id="copyrightYear"></span> New Path Vision. All rights reserved.</p>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 </body>
