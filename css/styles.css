@@ -19,6 +19,28 @@
   --container-max: 1200px;
   --section-pad-x: 48px;
   --inset-margin: 24px;
+
+  /* Semantic aliases (blueprint design-token model) — map onto the brand
+     tokens above rather than replacing them; new components should use
+     these names, existing components keep using the brand names directly. */
+  --brand-primary: var(--green-primary);
+  --brand-primary-dark: var(--green-primary-hover);
+  --brand-primary-soft: var(--sage-pale);
+  --brand-secondary: var(--ink-green);
+  --accent: var(--green-primary);
+  --surface: var(--cream);
+  --surface-alt: var(--sage-pale);
+  --surface-strong: var(--card-fill);
+  --text-primary: var(--ink-green);
+  --text-secondary: var(--body-muted);
+  --text-muted: var(--body-muted-2);
+  --border: var(--border-soft);
+  --border-hairline: var(--border-hair);
+  --focus: var(--ink-green);
+  /* Functional UI states with no brand equivalent to alias */
+  --success: #2e7d32;
+  --warning: #a15c00;
+  --danger: #a3271e;
 }
 
 * {
@@ -44,6 +66,54 @@ img {
 
 a {
   color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--ink-green);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 0 0 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+.external-action-link::after {
+  content: " \2197";
 }
 
 .container {
@@ -104,6 +174,39 @@ a {
   color: var(--white);
 }
 
+/* ---------- Utility bar ---------- */
+
+.utility-bar {
+  background: var(--ink-green);
+  color: var(--white);
+}
+
+.utility-bar-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 8px var(--section-pad-x);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 12.5px;
+}
+
+.utility-bar a {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.utility-bar a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.utility-emergency {
+  font-weight: 600;
+  opacity: 1 !important;
+}
+
 /* ---------- Nav ---------- */
 
 .site-nav {
@@ -143,6 +246,112 @@ a {
 
 .nav-toggle {
   display: none;
+}
+
+.nav-utility-mobile {
+  display: none;
+}
+
+/* ---------- Nav dropdowns (Eye Care / Dry Eye Center / Patient Resources) ---------- */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown summary {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-green);
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-dropdown summary::after {
+  content: " \25BE";
+  font-size: 11px;
+}
+
+.nav-dropdown[open] summary {
+  color: var(--green-primary);
+}
+
+.nav-dropdown-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 10px;
+  min-width: 220px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+}
+
+.nav-dropdown-panel a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-green);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.nav-dropdown-panel a:hover,
+.nav-dropdown-panel a:focus-visible {
+  background: var(--sage-pale);
+}
+
+.nav-dropdown-panel a[aria-current="page"] {
+  color: var(--green-primary);
+  font-weight: 700;
+}
+
+/* ---------- Breadcrumbs ---------- */
+
+.breadcrumbs {
+  padding: 18px var(--section-pad-x) 0;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12.5px;
+  color: var(--body-muted-2);
+}
+
+.breadcrumbs a {
+  color: var(--body-muted-2);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--green-primary);
+  text-decoration: underline;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "/";
+  margin-left: 6px;
+  color: var(--border-soft);
+}
+
+.breadcrumbs li[aria-current="page"] {
+  color: var(--ink-green);
+  font-weight: 600;
 }
 
 /* ---------- Hero ---------- */
@@ -385,6 +594,56 @@ a {
   margin: -12px 0 22px;
 }
 
+/* ---------- Footer nav ---------- */
+
+.footer-nav {
+  padding: 48px var(--section-pad-x) 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  border-top: 1px solid var(--border-hair);
+}
+
+.footer-nav-col h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-primary);
+  margin: 0 0 14px;
+}
+
+.footer-nav-col a,
+.footer-nav-col address,
+.footer-nav-col p {
+  display: block;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--body-muted);
+  text-decoration: none;
+  margin: 0 0 8px;
+}
+
+.footer-nav-col a:hover {
+  color: var(--green-primary);
+  text-decoration: underline;
+}
+
+.footer-legal {
+  grid-column: 1 / -1;
+  margin-top: 16px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-hair);
+  font-size: 12px;
+  color: var(--body-muted-2);
+}
+
+.footer-legal p {
+  margin: 0;
+}
+
 /* ---------- About: story ---------- */
 
 .about-story {
@@ -571,9 +830,17 @@ a {
   .contact-map {
     min-height: 220px;
   }
+
+  .footer-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 700px) {
+  .utility-bar {
+    display: none;
+  }
+
   .site-nav .nav-links:not(.nav-links-mobile) {
     display: none;
   }
@@ -610,6 +877,31 @@ a {
     position: relative;
   }
 
+  .nav-utility-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 14px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--border-hair);
+    font-size: 13px;
+  }
+
+  .nav-utility-mobile a {
+    text-decoration: none;
+    color: var(--ink-green);
+    font-weight: 500;
+  }
+
+  .nav-dropdown-panel {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 6px 0 6px 14px;
+    min-width: 0;
+  }
+
   .flagship-grid,
   .secondary-grid,
   .why-practice {
@@ -628,6 +920,11 @@ a {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+  }
+
+  .footer-nav {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
 
