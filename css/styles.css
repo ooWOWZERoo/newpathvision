@@ -136,6 +136,11 @@ a {
   text-decoration: none;
 }
 
+.site-nav .nav-links a[aria-current="page"] {
+  font-weight: 700;
+  color: var(--green-primary);
+}
+
 .nav-toggle {
   display: none;
 }
