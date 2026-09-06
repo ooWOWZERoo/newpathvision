@@ -4,9 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Contact | New Path Vision</title>
+<meta name="description" content="Reach New Path Vision in Pottstown, PA — address, phone, hours, and online booking." />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+
 <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -20,15 +23,65 @@
       <a href="about.html">About</a>
       <a href="index.html#dry-eye-center">Dry Eye Center</a>
       <a href="contact.html">Contact</a>
+      <!-- TODO: point every "Book now" link at the practice's 4PatientCare booking widget -->
       <a href="#book" class="btn btn-nav">Book now</a>
     </div>
   </nav>
 </header>
 
-<main class="stub-main">
-  <h1>Contact us</h1>
-  <p>This page isn't designed yet. Add the office address, phone number, hours, a map embed, and the booking widget here.</p>
-  <a href="index.html" class="btn btn-outline">Back to homepage</a>
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="eyebrow">Contact New Path Vision</p>
+    <h1>Let's get you in.</h1>
+    <p>Book online any time, or call the office directly — either way, we'll find a slot that isn't three months out.</p>
+    <div class="cta-row">
+      <a href="#book" class="btn btn-primary">Book now</a>
+      <!-- TODO: swap in the real practice phone number -->
+      <a href="tel:+15555555555" class="btn btn-outline">Call the office</a>
+    </div>
+  </section>
+
+  <!-- Contact details + map -->
+  <section class="contact-grid">
+    <div class="contact-details">
+      <!-- TODO: replace every placeholder below with the practice's real address, phone, email, and hours -->
+      <div class="contact-card">
+        <h3>Address</h3>
+        <p>123 Main Street<br />Pottstown, PA 19464</p>
+        <a href="https://maps.google.com/?q=New+Path+Vision+Pottstown+PA" class="btn btn-outline" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="contact-card">
+        <h3>Phone &amp; email</h3>
+        <p><a href="tel:+15555555555">(555) 555-5555</a><br /><a href="mailto:hello@newpathvision.com">hello@newpathvision.com</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>Hours</h3>
+        <p>
+          Monday&ndash;Thursday: 8:00am&ndash;5:00pm<br />
+          Friday: 8:00am&ndash;3:00pm<br />
+          Saturday&ndash;Sunday: Closed
+        </p>
+      </div>
+    </div>
+
+    <!-- TODO: replace with a real embedded Google Maps iframe once the address is final -->
+    <div class="contact-map" role="img" aria-label="Map placeholder — embed will show the office location">
+      Map
+    </div>
+  </section>
+
+  <!-- Booking CTA -->
+  <section class="site-footer" id="book">
+    <h2>Ready to book?</h2>
+    <p class="site-footer-note">
+      <!-- TODO: replace with the embedded 4PatientCare booking widget, or point this button at its URL -->
+      Online booking opens in the practice's scheduling widget.
+    </p>
+    <a href="#book" class="btn btn-footer">Book now</a>
+  </section>
+
 </main>
 
 <script src="js/main.js"></script>
