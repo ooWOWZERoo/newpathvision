@@ -3,8 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact | New Path Vision</title>
-<meta name="description" content="Reach New Path Vision in Pottstown, PA — address, phone, hours, and online booking." />
+<title>Eyewear &amp; Contacts | New Path Vision</title>
+<meta name="description" content="Eyewear and contact lens information for New Path Vision patients in Pottstown, PA." />
+<link rel="canonical" href="https://newpathvision-hr9l.vercel.app/eyewear-contacts.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="New Path Vision" />
+<meta property="og:title" content="Eyewear &amp; Contacts | New Path Vision" />
+<meta property="og:description" content="Eyewear and contact lens information for New Path Vision patients in Pottstown, PA." />
+<meta property="og:url" content="https://newpathvision-hr9l.vercel.app/eyewear-contacts.html" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23233420'/%3E%3Ctext x='32' y='45' font-family='Arial, sans-serif' font-weight='700' font-size='36' fill='%23fbf7ee' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -77,7 +85,7 @@
           <a href="patient-resources.html#faqs">FAQs</a>
         </div>
       </details>
-      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="contact.html">Contact</a>
       <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-nav" target="_blank" rel="noopener">Book now<span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </nav>
@@ -88,115 +96,26 @@
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
       <li><a href="/">Home</a></li>
-      <li aria-current="page">Contact</li>
+      <li aria-current="page">Eyewear &amp; Contacts</li>
     </ol>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
-    <p class="eyebrow">Contact New Path Vision</p>
-    <h1>Let's get you in.</h1>
-    <p>Book online any time, or call the office directly — either way, we'll find a slot that isn't three months out.</p>
+    <p class="eyebrow">Eyewear &amp; Contacts</p>
+    <h1>Our full eyewear &amp; contacts page is on the way.</h1>
+    <!-- TODO(later-phase): full Eyewear & Contacts build — optical environment, frame browsing, insurance/vision-plan info, optical team spotlight -->
+    <p>In the meantime, here's what's already available today.</p>
     <div class="cta-row">
-      <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-primary" target="_blank" rel="noopener">Book now<span class="visually-hidden"> (opens in a new tab)</span></a>
-      <a href="tel:+16103262754" class="btn btn-outline">Call the office</a>
+      <a href="https://yourstore.wewillship.com/?account_id=5755" class="btn btn-primary" target="_blank" rel="noopener">Reorder Contacts<span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-outline" target="_blank" rel="noopener">Book an Eyewear Consult<span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </section>
 
-  <!-- Contact form -->
-  <section class="services">
-    <h2 class="section-eyebrow">How can we help?</h2>
-    <p class="form-emergency-note">
-      For sudden vision loss, severe eye pain, a chemical injury, or a serious eye injury, call the office immediately at <a href="tel:+16103262754">610-326-2754</a> or seek emergency medical care — don't wait on a form response. See <a href="eye-care/emergency-eye-care.html">Emergency Eye Care</a> for more guidance.
-    </p>
-    <!-- TODO(later-phase): this form has no backend yet — see js/main.js. Do not add date-of-birth, diagnosis, medication, insurance member ID, or detailed health-history fields to this form without an approved, secure intake workflow. -->
-    <form class="contact-form" id="contactForm" novalidate>
-      <div>
-        <label for="firstName">First name <span class="required-marker">*</span></label>
-        <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
-      </div>
-      <div>
-        <label for="lastName">Last name <span class="required-marker">*</span></label>
-        <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
-      </div>
-      <div>
-        <label for="email">Email <span class="required-marker">*</span></label>
-        <input type="email" id="email" name="email" autocomplete="email" required />
-      </div>
-      <div>
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel" />
-      </div>
-      <div class="field-full">
-        <label for="reason">Reason for contacting <span class="required-marker">*</span></label>
-        <select id="reason" name="reason" required>
-          <option value="" selected disabled>Select a reason</option>
-          <option value="general">General question</option>
-          <option value="appointment">Appointment question</option>
-          <option value="billing">Billing / insurance</option>
-          <option value="optical">Eyeglasses / optical</option>
-          <option value="contacts">Contact lenses</option>
-          <option value="dry-eye">Dry eye</option>
-          <option value="medical">Medical eye-care question</option>
-          <option value="records">Records request</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="field-full">
-        <label for="preferredContact">Preferred response method</label>
-        <select id="preferredContact" name="preferredContact">
-          <option value="" selected>No preference</option>
-          <option value="email">Email</option>
-          <option value="phone">Phone</option>
-        </select>
-      </div>
-      <div class="field-full">
-        <label for="message">Message <span class="required-marker">*</span></label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <div class="contact-form-actions">
-        <button type="submit" class="btn btn-primary">Send message</button>
-        <p class="form-status" id="contactFormStatus" hidden></p>
-      </div>
-    </form>
-  </section>
-
-  <!-- Contact details + map -->
-  <section class="contact-grid">
-    <div class="contact-details">
-      <div class="contact-card">
-        <h3>Address</h3>
-        <p>1100 Heritage Drive<br />Pottstown, PA 19464</p>
-        <a href="https://maps.google.com/?q=1100+Heritage+Drive+Pottstown+PA+19464" class="btn btn-outline" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a>
-      </div>
-      <div class="contact-card">
-        <h3>Phone &amp; email</h3>
-        <p><a href="tel:+16103262754">610-326-2754</a><br /><a href="mailto:pottstown@newpathmedicalgroup.com">pottstown@newpathmedicalgroup.com</a></p>
-      </div>
-      <div class="contact-card">
-        <h3>Hours</h3>
-        <!-- TODO(fact): the practice's existing web properties show conflicting hours — confirm the current, correct hours before publishing -->
-        <p>
-          Monday&ndash;Thursday: 8:00am&ndash;5:00pm<br />
-          Friday: 8:00am&ndash;3:00pm<br />
-          Saturday&ndash;Sunday: Closed
-        </p>
-      </div>
-    </div>
-
-    <!-- TODO: replace with a real embedded Google Maps iframe once the address is final -->
-    <div class="contact-map" role="img" aria-label="Map placeholder — embed will show the office location">
-      Map
-    </div>
-  </section>
-
-  <!-- Booking CTA -->
+  <!-- Final CTA -->
   <section class="site-footer">
-    <h2>Ready to book?</h2>
-    <p class="site-footer-note">
-      Online booking opens in the practice's 4PatientCare scheduling widget.
-    </p>
-    <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-footer" target="_blank" rel="noopener">Book now<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <h2>Have a question about glasses or contacts?</h2>
+    <a href="contact.html" class="btn btn-footer">Contact us</a>
   </section>
 
 </main>

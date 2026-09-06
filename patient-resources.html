@@ -3,8 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact | New Path Vision</title>
-<meta name="description" content="Reach New Path Vision in Pottstown, PA — address, phone, hours, and online booking." />
+<title>Patient Resources | New Path Vision</title>
+<meta name="description" content="Insurance, payment, what to expect, patient portal, and FAQs for New Path Vision patients in Pottstown, PA." />
+<link rel="canonical" href="https://newpathvision-hr9l.vercel.app/patient-resources.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="New Path Vision" />
+<meta property="og:title" content="Patient Resources | New Path Vision" />
+<meta property="og:description" content="Insurance, payment, what to expect, patient portal, and FAQs for New Path Vision patients in Pottstown, PA." />
+<meta property="og:url" content="https://newpathvision-hr9l.vercel.app/patient-resources.html" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23233420'/%3E%3Ctext x='32' y='45' font-family='Arial, sans-serif' font-weight='700' font-size='36' fill='%23fbf7ee' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -71,13 +79,13 @@
       <details class="nav-dropdown">
         <summary>Patient Resources</summary>
         <div class="nav-dropdown-panel">
-          <a href="patient-resources.html">Patient Resources Overview</a>
+          <a href="patient-resources.html" aria-current="page">Patient Resources Overview</a>
           <a href="patient-resources/insurance-payment.html">Insurance &amp; Payment</a>
           <a href="patient-resources/what-to-expect.html">What to Expect</a>
           <a href="patient-resources.html#faqs">FAQs</a>
         </div>
       </details>
-      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="contact.html">Contact</a>
       <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-nav" target="_blank" rel="noopener">Book now<span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </nav>
@@ -88,115 +96,85 @@
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <ol>
       <li><a href="/">Home</a></li>
-      <li aria-current="page">Contact</li>
+      <li aria-current="page">Patient Resources</li>
     </ol>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
-    <p class="eyebrow">Contact New Path Vision</p>
-    <h1>Let's get you in.</h1>
-    <p>Book online any time, or call the office directly — either way, we'll find a slot that isn't three months out.</p>
+    <p class="eyebrow">Patient Resources</p>
+    <h1>Everything you need for a smoother visit.</h1>
+    <p>Forms, insurance information, FAQs and more — all in one place.</p>
     <div class="cta-row">
-      <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-primary" target="_blank" rel="noopener">Book now<span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-primary" target="_blank" rel="noopener">Book an Appointment<span class="visually-hidden"> (opens in a new tab)</span></a>
       <a href="tel:+16103262754" class="btn btn-outline">Call the office</a>
     </div>
   </section>
 
-  <!-- Contact form -->
+  <!-- Resource cards -->
   <section class="services">
-    <h2 class="section-eyebrow">How can we help?</h2>
-    <p class="form-emergency-note">
-      For sudden vision loss, severe eye pain, a chemical injury, or a serious eye injury, call the office immediately at <a href="tel:+16103262754">610-326-2754</a> or seek emergency medical care — don't wait on a form response. See <a href="eye-care/emergency-eye-care.html">Emergency Eye Care</a> for more guidance.
-    </p>
-    <!-- TODO(later-phase): this form has no backend yet — see js/main.js. Do not add date-of-birth, diagnosis, medication, insurance member ID, or detailed health-history fields to this form without an approved, secure intake workflow. -->
-    <form class="contact-form" id="contactForm" novalidate>
-      <div>
-        <label for="firstName">First name <span class="required-marker">*</span></label>
-        <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
-      </div>
-      <div>
-        <label for="lastName">Last name <span class="required-marker">*</span></label>
-        <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
-      </div>
-      <div>
-        <label for="email">Email <span class="required-marker">*</span></label>
-        <input type="email" id="email" name="email" autocomplete="email" required />
-      </div>
-      <div>
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel" />
-      </div>
-      <div class="field-full">
-        <label for="reason">Reason for contacting <span class="required-marker">*</span></label>
-        <select id="reason" name="reason" required>
-          <option value="" selected disabled>Select a reason</option>
-          <option value="general">General question</option>
-          <option value="appointment">Appointment question</option>
-          <option value="billing">Billing / insurance</option>
-          <option value="optical">Eyeglasses / optical</option>
-          <option value="contacts">Contact lenses</option>
-          <option value="dry-eye">Dry eye</option>
-          <option value="medical">Medical eye-care question</option>
-          <option value="records">Records request</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="field-full">
-        <label for="preferredContact">Preferred response method</label>
-        <select id="preferredContact" name="preferredContact">
-          <option value="" selected>No preference</option>
-          <option value="email">Email</option>
-          <option value="phone">Phone</option>
-        </select>
-      </div>
-      <div class="field-full">
-        <label for="message">Message <span class="required-marker">*</span></label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <div class="contact-form-actions">
-        <button type="submit" class="btn btn-primary">Send message</button>
-        <p class="form-status" id="contactFormStatus" hidden></p>
-      </div>
-    </form>
-  </section>
-
-  <!-- Contact details + map -->
-  <section class="contact-grid">
-    <div class="contact-details">
-      <div class="contact-card">
-        <h3>Address</h3>
-        <p>1100 Heritage Drive<br />Pottstown, PA 19464</p>
-        <a href="https://maps.google.com/?q=1100+Heritage+Drive+Pottstown+PA+19464" class="btn btn-outline" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> (opens in a new tab)</span></a>
-      </div>
-      <div class="contact-card">
-        <h3>Phone &amp; email</h3>
-        <p><a href="tel:+16103262754">610-326-2754</a><br /><a href="mailto:pottstown@newpathmedicalgroup.com">pottstown@newpathmedicalgroup.com</a></p>
-      </div>
-      <div class="contact-card">
-        <h3>Hours</h3>
-        <!-- TODO(fact): the practice's existing web properties show conflicting hours — confirm the current, correct hours before publishing -->
-        <p>
-          Monday&ndash;Thursday: 8:00am&ndash;5:00pm<br />
-          Friday: 8:00am&ndash;3:00pm<br />
-          Saturday&ndash;Sunday: Closed
-        </p>
-      </div>
-    </div>
-
-    <!-- TODO: replace with a real embedded Google Maps iframe once the address is final -->
-    <div class="contact-map" role="img" aria-label="Map placeholder — embed will show the office location">
-      Map
+    <h2 class="section-eyebrow">Resources</h2>
+    <div class="care-path-grid">
+      <a class="care-path-card" href="patient-resources/insurance-payment.html">
+        <h3>Insurance &amp; Payment</h3>
+        <p>What's accepted and how billing works.</p>
+      </a>
+      <a class="care-path-card" href="patient-resources/what-to-expect.html">
+        <h3>What to Expect</h3>
+        <p>What to bring and how a visit typically goes.</p>
+      </a>
+      <a class="care-path-card" href="https://newpathvision.eyefinityehr.com/" target="_blank" rel="noopener">
+        <h3>Patient Portal</h3>
+        <p>Access your health information online.</p>
+      <span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a class="care-path-card" href="https://yourstore.wewillship.com/?account_id=5755" target="_blank" rel="noopener">
+        <h3>Reorder Contacts</h3>
+        <p>Reorder your contact lenses quickly and easily.</p>
+      <span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a class="care-path-card" href="contact.html">
+        <h3>Contact / Records</h3>
+        <p>Questions, records requests, or anything else.</p>
+      </a>
+      <a class="care-path-card" href="#faqs">
+        <h3>FAQs</h3>
+        <p>Answers to common questions.</p>
+      </a>
     </div>
   </section>
 
-  <!-- Booking CTA -->
+  <!-- FAQs -->
+  <section class="services" id="faqs">
+    <h2 class="section-eyebrow">Frequently asked questions</h2>
+    <div class="faq-accordion">
+      <details class="faq-item">
+        <summary>Do you accept my insurance?</summary>
+        <!-- TODO(fact): confirm current accepted plans before publishing -->
+        <p>Call our office and we'll confirm whether your specific plan is accepted before your visit.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What should I bring to my appointment?</summary>
+        <p>Your current glasses or contacts, a list of medications, your insurance card, and sunglasses if you might be dilated.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I access the patient portal?</summary>
+        <!-- TODO(link): verify this is the correct patient-facing portal destination before relying on it -->
+        <p>Use the Patient Portal link in the header or footer of this site to log in or create an account.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I reorder contacts?</summary>
+        <p>Use the Reorder Contacts link in the header or footer — it opens our online ordering partner.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if I have an eye emergency?</summary>
+        <p>Call us right away at 610-326-2754. See our <a href="eye-care/emergency-eye-care.html">Emergency Eye Care</a> page for more guidance.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="site-footer">
-    <h2>Ready to book?</h2>
-    <p class="site-footer-note">
-      Online booking opens in the practice's 4PatientCare scheduling widget.
-    </p>
-    <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-footer" target="_blank" rel="noopener">Book now<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <h2>Still have a question?</h2>
+    <a href="contact.html" class="btn btn-footer">Contact Us</a>
   </section>
 
 </main>
@@ -255,10 +233,10 @@
       <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg></a>
       <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3.5 9h3v11.5h-3V9zM9.5 9h2.9v1.6h.04c.4-.75 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7v6.8h-3v-6c0-1.4 0-3.2-2-3.2s-2.3 1.6-2.3 3.1v6.1h-3V9z"/></svg></a>
     </div>
-    <div class="footer-legal">
-      <!-- TODO(later-phase): Privacy Policy / Accessibility Statement links -->
-      <p>&copy; <span id="copyrightYear"></span> New Path Vision. All rights reserved.</p>
-    </div>
+  <div class="footer-legal">
+    <!-- TODO(later-phase): Privacy Policy / Accessibility Statement links -->
+    <p>&copy; <span id="copyrightYear"></span> New Path Vision. All rights reserved.</p>
+  </div>
   </div>
 </footer>
 
