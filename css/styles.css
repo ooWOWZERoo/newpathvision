@@ -41,6 +41,11 @@
   --success: #2e7d32;
   --warning: #a15c00;
   --danger: #a3271e;
+
+  /* Dark-masthead / dark-hero palette, per the client's visual reference */
+  --accent-bright: #8fbf5a;
+  --text-on-dark: #f3f1e6;
+  --text-on-dark-muted: #b7c7a9;
 }
 
 * {
@@ -174,6 +179,11 @@ a {
   color: var(--white);
 }
 
+.site-footer .btn-footer::after {
+  content: "\2192";
+  margin-left: 8px;
+}
+
 /* ---------- Utility bar ---------- */
 
 .utility-bar {
@@ -207,23 +217,56 @@ a {
   opacity: 1 !important;
 }
 
-/* ---------- Nav ---------- */
+/* ---------- Nav (dark masthead — merges visually with .utility-bar above it) ---------- */
 
 .site-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 22px var(--section-pad-x);
+  background: var(--ink-green);
 }
 
 .site-nav .wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-mark {
+  flex-shrink: 0;
+}
+
+.wordmark-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.wordmark-title {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink-green);
+  color: var(--white);
+}
+
+.wordmark-title em {
+  font-style: normal;
+  color: var(--accent-bright);
+}
+
+.wordmark-tagline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-on-dark-muted);
+  margin-top: 2px;
+  white-space: nowrap;
 }
 
 .site-nav .nav-links {
@@ -235,13 +278,13 @@ a {
 .site-nav .nav-links a:not(.btn) {
   font-size: 13px;
   font-weight: 500;
-  color: var(--ink-green);
+  color: var(--white);
   text-decoration: none;
 }
 
 .site-nav .nav-links a[aria-current="page"] {
   font-weight: 700;
-  color: var(--green-primary);
+  color: var(--accent-bright);
 }
 
 .nav-toggle {
@@ -261,7 +304,7 @@ a {
 .nav-dropdown summary {
   font-size: 13px;
   font-weight: 500;
-  color: var(--ink-green);
+  color: var(--white);
   cursor: pointer;
   list-style: none;
 }
@@ -276,7 +319,7 @@ a {
 }
 
 .nav-dropdown[open] summary {
-  color: var(--green-primary);
+  color: var(--accent-bright);
 }
 
 .nav-dropdown-panel {
@@ -358,7 +401,8 @@ a {
 
 .hero {
   text-align: center;
-  background: var(--sage-pale);
+  background: var(--ink-green);
+  color: var(--text-on-dark);
   border-radius: 22px;
   margin: 0 var(--inset-margin);
   padding: 70px 48px 56px;
@@ -370,7 +414,7 @@ a {
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--green-primary);
+  color: var(--accent-bright);
   margin: 0 0 18px;
 }
 
@@ -381,12 +425,17 @@ a {
   line-height: 1.1;
   letter-spacing: -0.01em;
   margin: 0 0 20px;
+  color: var(--white);
+}
+
+.hero h1 .accent {
+  color: var(--accent-bright);
 }
 
 .hero p {
   font-size: 16px;
   line-height: 1.6;
-  color: var(--body-muted);
+  color: var(--text-on-dark-muted);
   max-width: 500px;
   margin: 0 auto 30px;
 }
@@ -399,6 +448,30 @@ a {
 
 .hero .cta-row {
   justify-content: center;
+}
+
+/* Hero buttons sit on a dark background, so both variants need to flip
+   for contrast, and pick up an arrow per the client's reference. */
+.hero .btn-primary {
+  background: var(--green-primary);
+  color: var(--white);
+}
+.hero .btn-primary:hover {
+  background: var(--green-primary-hover);
+}
+.hero .btn-outline {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--white);
+}
+.hero .btn-outline:hover {
+  border-color: var(--accent-bright);
+  color: var(--accent-bright);
+}
+.hero .btn-primary::after,
+.hero .btn-outline::after {
+  content: "\2192";
+  margin-left: 8px;
 }
 
 .section-cta {
@@ -936,14 +1009,67 @@ a.flagship-tile:focus-visible {
   text-decoration: underline;
 }
 
-/* ---------- Footer nav ---------- */
+/* ---------- Footer (dark, per the client's visual reference) ---------- */
+
+.main-footer {
+  background: var(--ink-green);
+}
+
+.footer-newsletter {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 40px var(--section-pad-x) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 32px;
+}
+
+.footer-newsletter h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--white);
+  margin: 0 0 4px;
+}
+
+.footer-newsletter p {
+  font-size: 13px;
+  color: var(--text-on-dark-muted);
+  margin: 0;
+}
+
+.footer-newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-newsletter-form input[type="email"] {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  padding: 12px 18px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  min-width: 220px;
+}
+
+.footer-newsletter-form input[type="email"]::placeholder {
+  color: var(--text-on-dark-muted);
+}
 
 .footer-nav {
-  padding: 48px var(--section-pad-x) 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 40px var(--section-pad-x) 24px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
-  border-top: 1px solid var(--border-hair);
 }
 
 .footer-nav-col h3 {
@@ -952,7 +1078,7 @@ a.flagship-tile:focus-visible {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--green-primary);
+  color: var(--accent-bright);
   margin: 0 0 14px;
 }
 
@@ -963,23 +1089,56 @@ a.flagship-tile:focus-visible {
   font-style: normal;
   font-size: 13px;
   line-height: 1.7;
-  color: var(--body-muted);
+  color: var(--text-on-dark-muted);
   text-decoration: none;
   margin: 0 0 8px;
 }
 
 .footer-nav-col a:hover {
-  color: var(--green-primary);
+  color: var(--white);
   text-decoration: underline;
+}
+
+.footer-social {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--text-on-dark-muted);
+}
+
+.footer-social a:hover {
+  border-color: var(--accent-bright);
+  color: var(--accent-bright);
+}
+
+.footer-social svg {
+  width: 15px;
+  height: 15px;
 }
 
 .footer-legal {
   grid-column: 1 / -1;
   margin-top: 16px;
   padding-top: 20px;
-  border-top: 1px solid var(--border-hair);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 12px;
-  color: var(--body-muted-2);
+  color: var(--text-on-dark-muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .footer-legal p {
@@ -1205,9 +1364,10 @@ a.team-bio-card:focus-visible {
   .dry-eye-stepper {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-@media (max-width: 700px) {
+  /* Nav collapses to hamburger a bit earlier than other content
+     reflows, since the logo mark + tagline need more breathing room
+     than plain text did. */
   .utility-bar {
     display: none;
   }
@@ -1223,10 +1383,10 @@ a.team-bio-card:focus-visible {
     width: 36px;
     height: 36px;
     border-radius: 8px;
-    border: 1px solid var(--border-soft);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     background: transparent;
     font-size: 18px;
-    color: var(--ink-green);
+    color: var(--white);
   }
 
   .site-nav.nav-open .nav-links {
@@ -1238,9 +1398,9 @@ a.team-bio-card:focus-visible {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
-    background: var(--cream);
+    background: var(--ink-green);
     padding: 20px 28px 28px;
-    border-bottom: 1px solid var(--border-hair);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     z-index: 20;
   }
 
@@ -1255,13 +1415,13 @@ a.team-bio-card:focus-visible {
     width: 100%;
     padding-bottom: 14px;
     margin-bottom: 4px;
-    border-bottom: 1px solid var(--border-hair);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     font-size: 13px;
   }
 
   .nav-utility-mobile a {
     text-decoration: none;
-    color: var(--ink-green);
+    color: var(--white);
     font-weight: 500;
   }
 
@@ -1269,10 +1429,27 @@ a.team-bio-card:focus-visible {
     position: static;
     box-shadow: none;
     border: none;
+    background: transparent;
     padding: 6px 0 6px 14px;
     min-width: 0;
   }
 
+  .nav-dropdown-panel a {
+    color: var(--text-on-dark-muted);
+  }
+
+  .nav-dropdown-panel a:hover,
+  .nav-dropdown-panel a:focus-visible {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+  }
+
+  .wordmark-tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
   .flagship-grid,
   .secondary-grid,
   .why-practice {
@@ -1313,6 +1490,24 @@ a.team-bio-card:focus-visible {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+  }
+
+  .footer-newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-newsletter-form {
+    width: 100%;
+  }
+
+  .footer-newsletter-form input[type="email"] {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .footer-legal {
+    flex-direction: column;
   }
 }
 
