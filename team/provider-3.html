@@ -3,10 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- TODO(fact): replace with the provider's real name/title once confirmed -->
 <title>Dr. [Name], Optometrist | New Path Vision</title>
 <meta name="description" content="Meet an optometrist at New Path Vision in Pottstown, PA." />
 <link rel="canonical" href="https://newpathvision-hr9l.vercel.app/team/provider-3.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="New Path Vision" />
+<meta property="og:title" content="Dr. [Name], Optometrist | New Path Vision" />
+<meta property="og:description" content="Meet an optometrist at New Path Vision in Pottstown, PA." />
+<meta property="og:url" content="https://newpathvision-hr9l.vercel.app/team/provider-3.html" />
+<meta name="twitter:card" content="summary" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23233420'/%3E%3Ctext x='32' y='45' font-family='Arial, sans-serif' font-weight='700' font-size='36' fill='%23fbf7ee' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,6 +28,7 @@
   <div class="utility-bar-inner">
     <a href="tel:+16103262754" class="utility-emergency">Eye emergency? Call 610-326-2754</a>
     <a href="https://yourstore.wewillship.com/?account_id=5755" class="external-action-link" target="_blank" rel="noopener">Reorder Contacts<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <!-- TODO(link): verify this is the correct patient-facing portal destination before relying on it -->
     <a href="https://newpathvision.eyefinityehr.com/" class="external-action-link" target="_blank" rel="noopener">Patient Portal<span class="visually-hidden"> (opens in a new tab)</span></a>
   </div>
 </div>
@@ -91,22 +97,49 @@
     <ol>
       <li><a href="/">Home</a></li>
       <li><a href="../team.html">Our Team</a></li>
-      <!-- TODO(fact): real name pending -->
       <li aria-current="page">Dr. [Name]</li>
     </ol>
   </nav>
 
-  <!-- Bio -->
-  <section class="hero">
-    <!-- TODO(asset): swap for a real headshot -->
-    <p class="eyebrow">Optometrist, OD</p>
-    <!-- TODO(fact): real name/credentials/bio copy pending -->
-    <h1>Dr. [Name]</h1>
-    <p>Sees patients for full-scope family eye care and dry eye treatment. Full bio, education/training details, and a real photo are coming soon.</p>
-    <div class="cta-row">
-      <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-primary" target="_blank" rel="noopener">Book now</a>
-      <a href="../team.html" class="btn btn-outline">Back to the full team</a>
+  <!-- Bio hero -->
+  <section class="hero provider-bio-hero">
+    <div>
+      <!-- TODO(fact): real name/credentials pending -->
+      <p class="eyebrow">Optometrist, OD</p>
+      <h1>Dr. [Name]</h1>
+      <p>Full-scope family eye care and dry eye treatment.</p>
+      <div class="cta-row">
+        <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-primary" target="_blank" rel="noopener">Book now</a>
+        <a href="../team.html" class="btn btn-outline">Back to the full team</a>
+      </div>
     </div>
+    <!-- TODO(asset): swap for a real headshot -->
+    <div class="provider-bio-photo">Photo</div>
+  </section>
+
+  <!-- Bio body -->
+  <section class="about-story">
+    <div>
+      <h2>Care focus</h2>
+      <!-- TODO(fact): real care-focus copy pending -->
+      <p>Full-scope family eye care and dry eye treatment.</p>
+      <h2>Education &amp; training</h2>
+      <!-- TODO(fact): real education/training/experience copy pending -->
+      <p>Education, residency/training, and years of experience will go here once confirmed.</p>
+    </div>
+    <dl class="provider-bio-body">
+      <dt>Related services</dt>
+      <dd>
+        <a href="../eye-care/comprehensive-eye-exams.html" class="btn btn-outline">Comprehensive Eye Exams</a>
+      <a href="../eye-care/medical-eye-care.html" class="btn btn-outline">Medical Eye Care</a>
+      </dd>
+    </dl>
+  </section>
+
+  <!-- CTA -->
+  <section class="site-footer">
+    <h2>Ready to book with Dr. [Name]?</h2>
+    <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="btn btn-footer" target="_blank" rel="noopener">Book now</a>
   </section>
 
 </main>
@@ -145,6 +178,7 @@
     <h3>Patient Actions</h3>
     <a href="https://appointments.4patientcare.app/?CoverKey=5621&amp;Gcount=0&amp;ReferredBy=website&amp;Source=website" class="external-action-link" target="_blank" rel="noopener">Book Appointment<span class="visually-hidden"> (opens in a new tab)</span></a>
     <a href="https://yourstore.wewillship.com/?account_id=5755" class="external-action-link" target="_blank" rel="noopener">Reorder Contacts<span class="visually-hidden"> (opens in a new tab)</span></a>
+    <!-- TODO(link): verify this is the correct patient-facing portal destination before relying on it -->
     <a href="https://newpathvision.eyefinityehr.com/" class="external-action-link" target="_blank" rel="noopener">Patient Portal<span class="visually-hidden"> (opens in a new tab)</span></a>
     <a href="../patient-resources/insurance-payment.html">Insurance &amp; Payment</a>
     <a href="../patient-resources/what-to-expect.html">What to Expect</a>
@@ -154,6 +188,7 @@
     <address>1100 Heritage Drive<br />Pottstown, PA 19464</address>
     <a href="tel:+16103262754">610-326-2754</a>
     <a href="mailto:pottstown@newpathmedicalgroup.com">pottstown@newpathmedicalgroup.com</a>
+    <!-- TODO(fact): hours are inconsistent across the practice's existing web properties — confirm before publishing -->
     <p>Mon&ndash;Thu 8am&ndash;5pm &middot; Fri 8am&ndash;3pm</p>
     <a href="../contact.html">Contact Us</a>
   </div>
@@ -163,9 +198,10 @@
       <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg></a>
       <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3.5 9h3v11.5h-3V9zM9.5 9h2.9v1.6h.04c.4-.75 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7v6.8h-3v-6c0-1.4 0-3.2-2-3.2s-2.3 1.6-2.3 3.1v6.1h-3V9z"/></svg></a>
     </div>
-    <div class="footer-legal">
-      <p>&copy; <span id="copyrightYear"></span> New Path Vision. All rights reserved.</p>
-    </div>
+  <div class="footer-legal">
+    <!-- TODO(later-phase): Privacy Policy / Accessibility Statement links -->
+    <p>&copy; <span id="copyrightYear"></span> New Path Vision. All rights reserved.</p>
+  </div>
   </div>
 </footer>
 

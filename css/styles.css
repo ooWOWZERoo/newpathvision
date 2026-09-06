@@ -474,6 +474,74 @@ a {
   margin-left: 8px;
 }
 
+/* ---------- Provider bio hero (photo + intro split) ---------- */
+
+.provider-bio-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+}
+
+.provider-bio-hero .eyebrow {
+  margin: 0 0 18px;
+}
+
+.provider-bio-hero p {
+  margin: 0 0 30px;
+  max-width: none;
+}
+
+.provider-bio-hero .cta-row {
+  justify-content: flex-start;
+}
+
+.provider-bio-photo {
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-on-dark-muted);
+  font-size: 13px;
+}
+
+/* ---------- Provider bio body ---------- */
+
+.provider-bio-body {
+  background: var(--card-fill);
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  padding: 28px;
+  margin: 0;
+}
+
+.provider-bio-body dt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--green-primary);
+  margin: 0 0 6px;
+}
+
+.provider-bio-body dd {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--body-muted);
+  margin: 0 0 20px;
+}
+
+.provider-bio-body dd:last-child {
+  margin-bottom: 0;
+}
+
+.provider-bio-body dd .btn {
+  margin: 0 8px 8px 0;
+}
+
 .section-cta {
   text-align: center;
   margin-top: 24px;
@@ -1363,6 +1431,15 @@ a.team-bio-card:focus-visible {
 
   .dry-eye-stepper {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .provider-bio-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .provider-bio-photo {
+    aspect-ratio: 16 / 9;
+    max-width: 320px;
   }
 
   /* Nav collapses to hamburger a bit earlier than other content
