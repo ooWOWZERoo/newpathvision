@@ -1371,6 +1371,84 @@ a.team-bio-card:focus-visible {
   margin-top: 16px;
 }
 
+/* ---------- Contact form ---------- */
+
+.form-emergency-note {
+  background: rgba(161, 92, 0, 0.08);
+  border: 1px solid rgba(161, 92, 0, 0.3);
+  color: var(--warning);
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin: 0 0 28px;
+}
+
+.form-emergency-note a {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form .field-full {
+  grid-column: 1 / -1;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-green);
+  margin-bottom: 6px;
+}
+
+.contact-form .required-marker {
+  color: var(--danger);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: var(--white);
+  color: var(--ink-green);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.form-status {
+  font-size: 13.5px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--sage-pale);
+  color: var(--ink-green);
+}
+
+.form-status[hidden] {
+  display: none;
+}
+
 .contact-map {
   min-height: 320px;
   border-radius: 20px;
@@ -1435,6 +1513,14 @@ a.team-bio-card:focus-visible {
 
   .provider-bio-hero {
     grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form .field-full {
+    grid-column: 1;
   }
 
   .provider-bio-photo {

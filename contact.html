@@ -103,6 +103,64 @@
     </div>
   </section>
 
+  <!-- Contact form -->
+  <section class="services">
+    <h2 class="section-eyebrow">How can we help?</h2>
+    <p class="form-emergency-note">
+      For sudden vision loss, severe eye pain, a chemical injury, or a serious eye injury, call the office immediately at <a href="tel:+16103262754">610-326-2754</a> or seek emergency medical care — don't wait on a form response. See <a href="eye-care/emergency-eye-care.html">Emergency Eye Care</a> for more guidance.
+    </p>
+    <!-- TODO(later-phase): this form has no backend yet — see js/main.js. Do not add date-of-birth, diagnosis, medication, insurance member ID, or detailed health-history fields to this form without an approved, secure intake workflow. -->
+    <form class="contact-form" id="contactForm" novalidate>
+      <div>
+        <label for="firstName">First name <span class="required-marker">*</span></label>
+        <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+      </div>
+      <div>
+        <label for="lastName">Last name <span class="required-marker">*</span></label>
+        <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
+      </div>
+      <div>
+        <label for="email">Email <span class="required-marker">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" />
+      </div>
+      <div class="field-full">
+        <label for="reason">Reason for contacting <span class="required-marker">*</span></label>
+        <select id="reason" name="reason" required>
+          <option value="" selected disabled>Select a reason</option>
+          <option value="general">General question</option>
+          <option value="appointment">Appointment question</option>
+          <option value="billing">Billing / insurance</option>
+          <option value="optical">Eyeglasses / optical</option>
+          <option value="contacts">Contact lenses</option>
+          <option value="dry-eye">Dry eye</option>
+          <option value="medical">Medical eye-care question</option>
+          <option value="records">Records request</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field-full">
+        <label for="preferredContact">Preferred response method</label>
+        <select id="preferredContact" name="preferredContact">
+          <option value="" selected>No preference</option>
+          <option value="email">Email</option>
+          <option value="phone">Phone</option>
+        </select>
+      </div>
+      <div class="field-full">
+        <label for="message">Message <span class="required-marker">*</span></label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="contact-form-actions">
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="form-status" id="contactFormStatus" hidden></p>
+      </div>
+    </form>
+  </section>
+
   <!-- Contact details + map -->
   <section class="contact-grid">
     <div class="contact-details">

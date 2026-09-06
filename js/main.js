@@ -49,3 +49,24 @@
   if (!el) return;
   el.textContent = new Date().getFullYear();
 })();
+
+// Contact form: no backend exists in this static site yet, so submission
+// is intercepted and reported honestly rather than faking a success state.
+// TODO(later-phase): wire this up to a real form-delivery destination.
+(function () {
+  var form = document.getElementById("contactForm");
+  var status = document.getElementById("contactFormStatus");
+  if (!form || !status) return;
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    status.hidden = false;
+    status.textContent =
+      "Online form submission isn't connected yet — please call 610-326-2754 or email pottstown@newpathmedicalgroup.com directly for now.";
+    status.setAttribute("role", "alert");
+  });
+})();
