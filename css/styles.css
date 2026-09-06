@@ -374,7 +374,95 @@ a {
   margin: 0 0 22px;
 }
 
-/* ---------- Stub page (About / Contact placeholders) ---------- */
+/* ---------- About: story ---------- */
+
+.about-story {
+  padding: 64px var(--section-pad-x);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.about-story h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.about-story p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--body-muted);
+  margin: 0 0 16px;
+}
+
+.about-story p:last-child {
+  margin-bottom: 0;
+}
+
+.about-facts {
+  background: var(--card-fill);
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  padding: 28px;
+  margin: 0;
+}
+
+.about-facts dt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--green-primary);
+}
+
+.about-facts dd {
+  margin: 4px 0 20px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--body-muted-2);
+}
+
+.about-facts dd:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- About: full team bios ---------- */
+
+.team-bio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.team-bio-card .team-photo {
+  height: 180px;
+  margin-bottom: 14px;
+}
+
+.team-bio-card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+}
+
+.team-bio-card .team-role {
+  margin-top: 2px;
+  margin-bottom: 8px;
+  color: var(--green-primary);
+}
+
+.team-bio-card p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--body-muted-2);
+  margin: 0;
+}
+
+/* ---------- Stub page (Contact placeholder) ---------- */
 
 .stub-main {
   padding: 96px var(--section-pad-x);
@@ -412,8 +500,13 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .team-grid {
+  .team-grid,
+  .team-bio-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-story {
+    grid-template-columns: 1fr;
   }
 }
 
