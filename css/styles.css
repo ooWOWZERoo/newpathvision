@@ -1024,6 +1024,18 @@ a.flagship-tile:focus-visible {
   color: var(--ink-green);
 }
 
+.team-grid a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s;
+}
+
+.team-grid a:hover,
+.team-grid a:focus-visible {
+  transform: translateY(-2px);
+}
+
 /* ---------- Insurance strip ---------- */
 
 .insurance {
